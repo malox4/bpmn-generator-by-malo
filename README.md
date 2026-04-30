@@ -75,7 +75,14 @@ The web dev server proxies `/api/*` to `http://localhost:5175` (see `bpmn-ui/web
 
 ## Universal AI prompt (Confluence → DSL)
 
-See `PROMPT_AND_USAGE.md`.
+See **`PROMPT_AND_USAGE.md`**.
+
+## Troubleshooting
+
+- **Port already in use**
+  - Stop the running process (Ctrl+C) or change port via `PORT` env var for the server.
+- **Web shows `/api/*` proxy errors**
+  - Ensure the API server is running on `http://localhost:5175`.
 
 ### Task type prefixes in DSL
 
