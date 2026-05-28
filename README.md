@@ -13,7 +13,27 @@ This repo contains a small toolchain:
 
 ## Quick start (Windows / macOS / Linux)
 
-### Option A) Run everything with one command (recommended)
+### Option A) Run via Docker (Easiest - no local dependencies needed)
+
+The recommended way for a quick start on any machine. You only need Docker installed.
+
+From the repo root:
+
+```bash
+# Start the container in background
+docker compose up -d
+```
+
+Open your browser at **`http://localhost:5175`**.
+
+To stop the container:
+```bash
+docker compose down
+```
+
+### Option B) Run locally with one command
+
+Requires Node.js installed locally.
 
 From the repo root:
 
@@ -37,7 +57,11 @@ npm run dev
 VITE_API_TARGET="http://localhost:5176" npm run dev
 ```
 
-### 1) Build the parser (Rust)
+### Option C) Build and run manually
+
+Requires **Rust** and **Node.js** installed locally.
+
+#### 1) Build the parser (Rust)
 
 From the repo root:
 

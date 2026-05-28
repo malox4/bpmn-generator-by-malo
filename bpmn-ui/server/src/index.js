@@ -34,19 +34,20 @@ if (fsSync.existsSync(webDistDir)) {
 }
 
 function resolveBpmnParserExe() {
+  const exeExt = process.platform === "win32" ? ".exe" : "";
   const releaseExe = path.join(
     repoRoot,
     "bpmn-parser",
     "target",
     "release",
-    "ogb.exe",
+    `ogb${exeExt}`,
   );
   const debugExe = path.join(
     repoRoot,
     "bpmn-parser",
     "target",
     "debug",
-    "ogb.exe",
+    `ogb${exeExt}`,
   );
 
   // Allow explicit override (useful in CI or custom builds)

@@ -1,0 +1,11 @@
+node_modules
+bpmn-parser/target
+bpmn-ui/web/dist
+bpmn-ui/web/node_modules
+bpmn-ui/server/node_modules
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+PROMPT_AND_USAGE.md
