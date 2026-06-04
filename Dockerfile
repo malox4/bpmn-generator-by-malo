@@ -1,3 +1,4 @@
+# cache-bust-1
 # Stage 1: Build Rust binary
 FROM rust:1.80-slim as rust-builder
 WORKDIR /app
