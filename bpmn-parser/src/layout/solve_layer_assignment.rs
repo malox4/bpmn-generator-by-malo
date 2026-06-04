@@ -1,6 +1,7 @@
 use good_lp::variables;
 use good_lp::variable;
 use good_lp::Expression;
+use good_lp::Solution;
 use good_lp::SolverModel;
 use crate::common::edge::Edge;
 use crate::common::graph::Graph;
