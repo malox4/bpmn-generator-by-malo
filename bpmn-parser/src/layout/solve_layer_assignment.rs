@@ -1,3 +1,6 @@
+use good_lp::variables;
+use good_lp::variable;
+use good_lp::Expression;
 use crate::common::edge::Edge;
 use crate::common::graph::Graph;
 use crate::common::lane::Lane;
