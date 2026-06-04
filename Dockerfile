@@ -2,7 +2,7 @@
 # Stage 1: Build Rust binary
 FROM rust:1.80-slim as rust-builder
 WORKDIR /app
-COPY bpmn-parser/Cargo.toml bpmn-parser/Cargo.lock ./bpmn-parser/
+COPY bpmn-parser/Cargo.toml ./bpmn-parser/
 # Create a dummy main.rs to cache dependencies
 RUN mkdir -p bpmn-parser/src && echo "fn main() {}" > bpmn-parser/src/main.rs
 RUN cd bpmn-parser && cargo build --release
