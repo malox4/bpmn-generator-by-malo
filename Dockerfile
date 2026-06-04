@@ -3,11 +3,7 @@
 FROM rust:1.85-slim as rust-builder
 WORKDIR /app
 COPY bpmn-parser/Cargo.toml ./bpmn-parser/
-# Create a dummy main.rs to cache dependencies
-RUN mkdir -p bpmn-parser/src && echo "fn main() {}" > bpmn-parser/src/main.rs
-RUN cd bpmn-parser && cargo build --release
-RUN rm -f bpmn-parser/src/main.rs bpmn-parser/target/release/deps/ogb*
-COPY bpmn-parser/Cargo.toml ./bpmn-parser/
+COPY bpmn-parser/src ./bpmn-parser/src
 RUN cd bpmn-parser && cargo build --release
 
 # Stage 2: Build Web UI
