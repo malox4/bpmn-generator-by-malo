@@ -1,6 +1,6 @@
 # cache-bust-1
 # Stage 1: Build Rust binary
-FROM rust:1.80-slim as rust-builder
+FROM rust:1.85-slim as rust-builder
 WORKDIR /app
 COPY bpmn-parser/Cargo.toml ./bpmn-parser/
 # Create a dummy main.rs to cache dependencies
