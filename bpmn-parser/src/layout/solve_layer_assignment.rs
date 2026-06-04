@@ -3,7 +3,7 @@ use crate::common::graph::Graph;
 use crate::common::lane::Lane;
 use crate::common::node::Node;
 use crate::common::pool::Pool;
-use good_lp::*;
+use good_lp::microlp;
 use std::collections::HashMap;
 
 pub fn solve_layer_assignment(graph: &mut Graph) {
@@ -43,7 +43,7 @@ fn solve_layers(edges: &Vec<Edge>, lane: &mut Lane) {
         }
     }
 
-    let mut problem = vars.minimise(objective).using(minilp);
+    let mut problem = vars.minimise(objective).using(microlp);
 
     for edge in edges {
         let from_var = layer_vars
