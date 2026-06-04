@@ -6,7 +6,7 @@ COPY bpmn-parser/Cargo.toml bpmn-parser/Cargo.lock ./bpmn-parser/
 RUN mkdir -p bpmn-parser/src && echo "fn main() {}" > bpmn-parser/src/main.rs
 RUN cd bpmn-parser && cargo build --release
 RUN rm -f bpmn-parser/src/main.rs bpmn-parser/target/release/deps/ogb*
-COPY bpmn-parser/src ./bpmn-parser/src
+COPY bpmn-parser/Cargo.toml ./bpmn-parser/
 RUN cd bpmn-parser && cargo build --release
 
 # Stage 2: Build Web UI
